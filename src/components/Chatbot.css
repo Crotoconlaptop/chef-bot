@@ -1,0 +1,16 @@
+.chatbot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    overflow: hidden; /* Evita desbordamientos */
+  }
+  
+  .fullpage-chat {
+    width: 100%;
+    height: 100%;
+  }
+  
