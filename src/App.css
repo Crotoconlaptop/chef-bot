@@ -1,47 +1,19 @@
-/* src/App.css */
-body,
-html,
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
-  color: #f5f5f5;
-  overflow: hidden;
-}
-
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.app-header {
+.App {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #1c1c1c;
-  border-bottom: 1px solid #333;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff3e0;
+  min-height: 100vh;
 }
 
-.app-header h1 {
-  font-size: 2rem;
-  color: #f06292;
+.App h1 {
+  font-size: 3rem;
+  color: #b71c1c;
+  margin-bottom: 0.5rem;
 }
 
-.app-header p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-top: 5px;
-}
-
-.chat-wrapper {
-  flex: 1;
-  overflow: hidden;
-}
-
-.chat-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.App p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
 }
