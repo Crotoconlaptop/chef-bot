@@ -9,6 +9,14 @@
     overflow: hidden; /* Evita desbordamientos */
   }
   
+  .chatbot-container img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+  }
+  
   .fullpage-chat {
     width: 100%;
     height: 100%;
