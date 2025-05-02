@@ -34,8 +34,8 @@ function Chatbot() {
       <div style={{ height: "600px", width: "100%" }}>
         <FullPageChat
           ref={chatRef}
-          chatflowid="5473a1c9-fb53-4a21-966c-80ddd4d9fc1f"
-          apiHost="https://flowiseai-railway-production-57be.up.railway.app"
+          chatflowid="3a62603b-3342-4ad1-8b24-06f1905a5b2a"
+          apiHost="https://oscarchatbot.duckdns.org"
         />
       </div>
 
