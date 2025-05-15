@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { FullPageChat } from "flowise-embed-react";
+import { BubbleChat } from "flowise-embed-react";
 
 function Chatbot() {
   const chatRef = useRef();
@@ -13,12 +13,11 @@ function Chatbot() {
         const message = data.payload;
 
         try {
-          const parsed = JSON.parse(message); // Intentamos parsear JSON
+          const parsed = JSON.parse(message);
           if (parsed?.image_url) {
-            setDishData(parsed); // Si trae imagen, lo guardamos
+            setDishData(parsed);
           }
         } catch (err) {
-          // Si no es JSON, lo ignoramos
           console.log("Texto plano del bot:", message);
         }
       }
@@ -30,14 +29,75 @@ function Chatbot() {
 
   return (
     <div style={{ width: "100%" }}>
-      {/* Tu chat original, intacto ✔️ */}
-      <div style={{ height: "600px", width: "100%" }}>
-        <FullPageChat
-          ref={chatRef}
-          chatflowid="3a62603b-3342-4ad1-8b24-06f1905a5b2a"
-          apiHost="https://oscarchatbot.duckdns.org"
-        />
-      </div>
+      {/* Chat flotante personalizado con estilo gastronómico */}
+      <BubbleChat
+        ref={chatRef}
+        chatflowid="3a62603b-3342-4ad1-8b24-06f1905a5b2a"
+        apiHost="https://oscarchatbot.duckdns.org"
+        theme={{
+          button: {
+            backgroundColor: '#b71c1c',
+            right: 20,
+            bottom: 20,
+            size: 54,
+            dragAndDrop: false,
+            iconColor: '#fff3e0',
+            customIconSrc: '/chef-icon.svg',
+            autoWindowOpen: {
+              autoOpen: true,
+              openDelay: 1,
+              autoOpenOnMobile: true
+            }
+          },
+          tooltip: {
+            showTooltip: true,
+            tooltipMessage: '¿Le puedo sugerir un platillo del menú? 🍽️',
+            tooltipBackgroundColor: '#8b0000',
+            tooltipTextColor: '#fff3e0',
+            tooltipFontSize: 15
+          },
+          chatWindow: {
+            showTitle: true,
+            showAgentMessages: true,
+            title: 'Chef Raigt',
+            titleAvatarSrc: '/chef-raigt.png',
+            welcomeMessage: 'Bonjour! Soy el Chef Raigt. ¿Desea conocer nuestros platillos?',
+            backgroundColor: '#fffdf8',
+            height: 640,
+            width: 420,
+            fontSize: 15,
+            starterPrompts: [
+              "¿Qué contiene el menú vegetariano?",
+              "¿Este platillo tiene gluten?",
+              "¿Qué me recomienda el chef?"
+            ],
+            textInput: {
+              placeholder: "Pregunte sobre un platillo, alergias o sugerencias...",
+              backgroundColor: '#fff8f0',
+              textColor: '#5d4037',
+              sendButtonColor: '#b71c1c',
+              autoFocus: true
+            },
+            botMessage: {
+              backgroundColor: '#fff8f0',
+              textColor: '#5d4037',
+              showAvatar: true,
+              avatarSrc: '/chef-raigt.png'
+            },
+            userMessage: {
+              backgroundColor: '#b71c1c',
+              textColor: '#fff3e0',
+              showAvatar: false
+            },
+            footer: {
+              textColor: '#8b0000',
+              text: 'Presentado por',
+              company: 'Chef Raigt',
+              companyLink: '#'
+            }
+          }
+        }}
+      />
 
       {/* Mostramos la imagen del plato si existe */}
       {dishData && (
@@ -57,3 +117,4 @@ function Chatbot() {
 }
 
 export default Chatbot;
+
