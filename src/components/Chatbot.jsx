@@ -42,7 +42,7 @@ function Chatbot() {
             size: 54,
             dragAndDrop: false,
             iconColor: '#fff3e0',
-            customIconSrc: '/chef-icon.svg',
+            customIconSrc: '/chef-raigt.png',
             autoWindowOpen: {
               autoOpen: true,
               openDelay: 1,
