@@ -67,9 +67,18 @@ body {
   height: 250px;
   object-fit: contain; /* Muestra toda la imagen sin recorte */
   background-color: #fff2e5; /* Color de fondo para rellenar espacio vacío */
-  border-radius: 8px;
+  border-radius: 15px;
   margin-top: 12px;
   display: block;
 }
+
+.category-title {
+  font-size: 1.8rem;
+  color: #b71c1c;
+  margin-top: 40px;
+  border-bottom: 2px solid #e0cdb9;
+  padding-bottom: 5px;
+}
+
 
 
