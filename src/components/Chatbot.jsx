@@ -67,9 +67,9 @@ function Chatbot() {
             width: 420,
             fontSize: 15,
             starterPrompts: [
-              "¿Qué contiene el menú vegetariano?",
-              "¿Este platillo tiene gluten?",
-              "¿Qué me recomienda el chef?"
+              "¿Qué tipos de ensalada tienes?",
+              "Empecemos por los sandwiches!! muestrame lo que tienes",
+              "Primero las bebidas, ¿Que bebidas tienes disponible?"
             ],
             textInput: {
               placeholder: "Pregunte sobre un platillo, alergias o sugerencias...",
